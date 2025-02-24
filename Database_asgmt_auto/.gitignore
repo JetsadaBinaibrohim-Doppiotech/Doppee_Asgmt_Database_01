@@ -7,3 +7,4 @@ report.html
 *.jpg
 *.jpeg
 *.bmp
+/log_data/

@@ -5,13 +5,36 @@ Resource    ../import.robot
 TC01 - Verify can add and delete product to database
     [Tags]                                                           tc01
     commom_keyword.Connect To Database And Fetch Data
-    commom_keyword.Check If Item Not Exist In Database Then Added
-    get_product.Get Every Product And Verify Data
-    delete_product.Check If Item Exist In Database Then Delete
+    commom_keyword.Check If Item Not Exist In Database Then Added    
+    ...                                                              666     
+    ...                                                              Jetsada phone    
+    ...                                                              Smartphone    
+    ...                                                              10      
+    ...                                                              10000.0    
+    ...                                                              1
+    get_product.Get Every Column Of Product And Verify Data
+    ...                                                              666     
+    ...                                                              Jetsada phone    
+    ...                                                              Smartphone    
+    ...                                                              10      
+    ...                                                              10000.0    
+    ...                                                              1
+    delete_product.Check If Item Exist In Database Then Delete   
+    ...                                                              Jetsada phone    
+
 
 TC02 - Verify can decrease product qty
     [Tags]                                                           tc02
     commom_keyword.Connect To Database And Fetch Data
     commom_keyword.Check If Item Not Exist In Database Then Added
+    ...                                                              666     
+    ...                                                              Jetsada phone    
+    ...                                                              Smartphone    
+    ...                                                              10      
+    ...                                                              10000.0    
+    ...                                                              1
     decrease_product.Decrease Product QTY
+    ...                                                              666 
+    ...                                                              10  
     delete_product.Check If Item Exist In Database Then Delete
+    ...                                                              Jetsada phone    

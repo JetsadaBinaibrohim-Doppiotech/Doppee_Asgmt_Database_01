@@ -1,11 +1,11 @@
 ***Keywords***
-Decrease Product QTY
-    ${product_qty}        ${product_id}=                                                   Get Every Product And Verify Data
+Decrease Product QTY After Buy Product
+    [Arguments]    ${pd_id}        ${pd_qty}
     
-    IF                    ${product_qty} > 0
-    ${new_qty}=           Evaluate                                                         ${product_qty} - 1
-    Execute SQL String    UPDATE product SET qty=${product_qty} WHERE id=${product_id};
-    Log To Console        "Decreased QTY from ${product_qty} to ${new_qty}"
+    IF                    ${pd_qty} > 0
+    ${new_qty}=           Evaluate                                                         ${pd_qty} - 1
+    Execute SQL String    UPDATE product SET qty=${pd_qty} WHERE id=${pd_id};
+    Log To Console        "Decreased QTY from ${pd_qty} to ${new_qty}"
     ELSE
     Log To Console        "QTY is 0, cannot decrease."
     END

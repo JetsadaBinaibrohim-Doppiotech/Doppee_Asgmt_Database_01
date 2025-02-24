@@ -1,6 +1,8 @@
 ***Keywords***
-Get Every Product And Verify Data
-    ${result}              Query        SELECT * FROM product WHERE name='Jetsada phone';
+Get Every Column Of Product And Verify Data
+    [Arguments]    ${pd_id}        ${pd_name}       ${pd_desc}      ${pd_qty}       ${pd_price}     ${pd_rec}
+
+    ${result}              Query        SELECT * FROM product WHERE name='${pd_name}';
     Should Not Be Empty    ${result}    "Item not exists"
 
     ${id}=             Set Variable      ${result[0][0]}
@@ -18,11 +20,9 @@ Get Every Product And Verify Data
     Log to console    ${price}
     Log to console    ${rec_status}
 
-    Should Be Equal As Numbers    ${id}             666              "Record status does not match!"
-    Should Be Equal               ${name}           Jetsada phone    "Product name does not match!"
-    Should Be Equal               ${description}    Smartphone       "Description does not match!"
-    Should Be Equal As Numbers    ${qty}            10               "Quantity does not match!"
-    Should Be Equal As Numbers    ${price}          10000            "Price does not match!"
-    Should Be Equal As Numbers    ${rec_status}     1                "Record status does not match!"
-
-    RETURN    ${qty}    ${id}
+    Should Be Equal As Numbers    ${id}             ${pd_id}       "Record status does not match!"
+    Should Be Equal               ${name}           ${pd_name}     "Product name does not match!"
+    Should Be Equal               ${description}    ${pd_desc}     "Description does not match!"
+    Should Be Equal As Numbers    ${qty}            ${pd_qty}      "Quantity does not match!"
+    Should Be Equal As Numbers    ${price}          ${pd_price}    "Price does not match!"
+    Should Be Equal As Numbers    ${rec_status}     ${pd_rec}      "Record status does not match!"
