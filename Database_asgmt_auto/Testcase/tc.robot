@@ -19,7 +19,7 @@ TC01 - Verify can add and delete product to database
     ...                                                              10      
     ...                                                              10000.0    
     ...                                                              1
-    delete_product.Check If Item Exist In Database Then Delete   
+    delete_product.Check If After Item Exist In Database Then Delete 
     ...                                                              Jetsada phone    
 
 
@@ -33,8 +33,8 @@ TC02 - Verify can decrease product qty
     ...                                                              10      
     ...                                                              10000.0    
     ...                                                              1
-    decrease_product.Decrease Product QTY
+    decrease_product.Decrease Product QTY After Buy Product
     ...                                                              666 
-    ...                                                              10  
-    delete_product.Check If Item Exist In Database Then Delete
-    ...                                                              Jetsada phone    
+    ...                                                              0  
+    #delete_product.Check If After Item Exist In Database Then Delete
+    #...                                                              Jetsada phone    
