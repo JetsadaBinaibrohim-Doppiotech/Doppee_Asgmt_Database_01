@@ -4,3 +4,10 @@ DB_PORT: 10004                   #พอร์ตของ Database
 DB_NAME: training_platform_db    #ชื่อของ Database ที่ต้องการเชื่อมต่อ
 DB_USER: doppio-training-user    #ชื่อผู้ใช้ของ Database
 DB_PASSWORD: Doppio123*              #รหัสผ่านของ Database
+
+product_id : 666
+product_name : "Jetsada phone"
+product_desc : "Very Lucky phone"
+product_qty : 10
+product_price : 10000.0
+rec_status : 1

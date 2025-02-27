@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2 (Python 3.9.1 on win32)" generated="2025-02-27T09:48:05.478417" rpa="false" schemaversion="5">
+<robot generator="Robot 7.2 (Python 3.9.1 on win32)" generated="2025-02-27T14:22:32.004086" rpa="false" schemaversion="5">
 <suite id="s1" name="Tc" source="C:\Users\jetsada.b\Desktop\GitHub\Doppee_Asgmt_Database_01\Database_asgmt_auto\Testcase\tc.robot">
-<test id="s1-t1" name="TC02 - Verify can decrease product qty" line="26">
+<test id="s1-t1" name="TC01 - Verify can add and delete product to database" line="5">
 <kw name="Connect To Database And Fetch Data" owner="commom_keyword">
 <kw name="Connect To Database" owner="DatabaseLibrary">
-<msg time="2025-02-27T09:48:05.534479" level="INFO">Looking for configuration file: 'resources\db.cfg'</msg>
-<msg time="2025-02-27T09:48:05.534479" level="INFO">Configuration file doesn't exist</msg>
-<msg time="2025-02-27T09:48:05.545225" level="INFO">Connect to DB using : psycopg2.connect(database='training_platform_db', user='doppio-training-user', password=***, host='125.26.15.143', port=10004)</msg>
+<msg time="2025-02-27T14:22:32.068161" level="INFO">Looking for configuration file: 'resources\db.cfg'</msg>
+<msg time="2025-02-27T14:22:32.068161" level="INFO">Configuration file doesn't exist</msg>
+<msg time="2025-02-27T14:22:32.078694" level="INFO">Connect to DB using : psycopg2.connect(database='training_platform_db', user='doppio-training-user', password=***, host='125.26.15.143', port=10004)</msg>
 <arg>${DB_DRIVER}</arg>
 <arg>${DB_NAME}</arg>
 <arg>${DB_USER}</arg>
@@ -16,50 +16,50 @@
 <doc>Creates a database connection using the DB API 2.0 ``db_module`` and the parameters provided.
 Along with listed commonly used arguments (`db_name`, `db_host` etc.)
 you can set any other DB module specific parameters as key/value pairs.</doc>
-<status status="PASS" start="2025-02-27T09:48:05.533479" elapsed="0.059887"/>
+<status status="PASS" start="2025-02-27T14:22:32.067141" elapsed="0.074798"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>🟢</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-02-27T09:48:05.593366" elapsed="0.000000"/>
+<status status="PASS" start="2025-02-27T14:22:32.141939" elapsed="0.001013"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>.Database : Connect</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-02-27T09:48:05.593366" elapsed="0.000000"/>
+<status status="PASS" start="2025-02-27T14:22:32.142952" elapsed="0.000000"/>
 </kw>
-<status status="PASS" start="2025-02-27T09:48:05.533479" elapsed="0.059887"/>
+<status status="PASS" start="2025-02-27T14:22:32.065614" elapsed="0.078411"/>
 </kw>
 <kw name="Check If Item Not Exist In Database Then Added" owner="commom_keyword">
 <kw name="Query" owner="DatabaseLibrary">
-<msg time="2025-02-27T09:48:05.593366" level="INFO" html="true">Executing sql:&lt;br&gt;&lt;code style="font-weight: bold;"&gt;SELECT COUNT(id) FROM product WHERE name='Jetsada phone';&lt;/code&gt;</msg>
-<msg time="2025-02-27T09:48:05.620394" level="INFO" html="true">&lt;div style="max-width: 100%; overflow-x: auto;"&gt;&lt;table style="width: auto; border-collapse: collapse; border: 2px solid rgb(140 140 140)"&gt;&lt;caption style="text-align: left; font-weight: bold; padding: 5px;"&gt;Query returned 1 rows&lt;/caption&gt;&lt;tr&gt;&lt;th scope="col" style="background-color: #d6ecd4; border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;Row&lt;/th&gt;&lt;th scope="col" style="background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;count&lt;/th&gt;&lt;/tr&gt;&lt;tr style="background-color: #eee;"&gt;&lt;th scope="row" style="background-color: #d6ecd4;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;0&lt;/th&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;1&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;</msg>
-<msg time="2025-02-27T09:48:05.620394" level="INFO">${result} = [(1,)]</msg>
+<msg time="2025-02-27T14:22:32.145045" level="INFO" html="true">Executing sql:&lt;br&gt;&lt;code style="font-weight: bold;"&gt;SELECT COUNT(id) FROM product WHERE name='Jetsada phone';&lt;/code&gt;</msg>
+<msg time="2025-02-27T14:22:32.160236" level="INFO" html="true">&lt;div style="max-width: 100%; overflow-x: auto;"&gt;&lt;table style="width: auto; border-collapse: collapse; border: 2px solid rgb(140 140 140)"&gt;&lt;caption style="text-align: left; font-weight: bold; padding: 5px;"&gt;Query returned 1 rows&lt;/caption&gt;&lt;tr&gt;&lt;th scope="col" style="background-color: #d6ecd4; border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;Row&lt;/th&gt;&lt;th scope="col" style="background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;count&lt;/th&gt;&lt;/tr&gt;&lt;tr style="background-color: #eee;"&gt;&lt;th scope="row" style="background-color: #d6ecd4;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;0&lt;/th&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;1&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;</msg>
+<msg time="2025-02-27T14:22:32.160236" level="INFO">${result} = [(1,)]</msg>
 <var>${result}</var>
 <arg>SELECT COUNT(id) FROM product WHERE name='${pd_name}';</arg>
 <doc>Runs a query with the ``select_statement`` and returns the result as list of rows.
 The type of row values depends on the database module -
 usually they are tuples or tuple-like objects.</doc>
-<status status="PASS" start="2025-02-27T09:48:05.593366" elapsed="0.027028"/>
+<status status="PASS" start="2025-02-27T14:22:32.144025" elapsed="0.016211"/>
 </kw>
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2025-02-27T09:48:05.621399" level="INFO">${count} = 1</msg>
+<msg time="2025-02-27T14:22:32.161226" level="INFO">${count} = 1</msg>
 <var>${count}</var>
 <arg>${result[0][0]}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2025-02-27T09:48:05.621399" elapsed="0.000000"/>
+<status status="PASS" start="2025-02-27T14:22:32.161226" elapsed="0.000000"/>
 </kw>
 <if>
 <branch type="IF" condition="${count} == 0">
 <kw name="Execute Sql String" owner="DatabaseLibrary">
 <arg>INSERT INTO product (id, name, description, qty, price, rec_status) VALUES (${pd_id}, '${pd_name}', '${pd_desc}', ${pd_qty}, ${pd_price}, ${pd_rec});</arg>
 <doc>Executes the ``sql_string`` as a single SQL command.</doc>
-<status status="NOT RUN" start="2025-02-27T09:48:05.621399" elapsed="0.000000"/>
+<status status="NOT RUN" start="2025-02-27T14:22:32.162230" elapsed="0.000000"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>Database : Inserted "Jetsada phone" into database</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" start="2025-02-27T09:48:05.622402" elapsed="0.000000"/>
+<status status="NOT RUN" start="2025-02-27T14:22:32.162230" elapsed="0.000000"/>
 </kw>
 <kw name="Query" owner="DatabaseLibrary">
 <var>${new_count}</var>
@@ -67,26 +67,26 @@ usually they are tuples or tuple-like objects.</doc>
 <doc>Runs a query with the ``select_statement`` and returns the result as list of rows.
 The type of row values depends on the database module -
 usually they are tuples or tuple-like objects.</doc>
-<status status="NOT RUN" start="2025-02-27T09:48:05.622402" elapsed="0.000000"/>
+<status status="NOT RUN" start="2025-02-27T14:22:32.162230" elapsed="0.000000"/>
 </kw>
 <kw name="Should Be Equal As Numbers" owner="BuiltIn">
 <arg>${new_count[0][0]}</arg>
 <arg>1</arg>
 <arg>"Insert failed"</arg>
 <doc>Fails if objects are unequal after converting them to real numbers.</doc>
-<status status="NOT RUN" start="2025-02-27T09:48:05.622402" elapsed="0.000000"/>
+<status status="NOT RUN" start="2025-02-27T14:22:32.162230" elapsed="0.000000"/>
 </kw>
-<status status="NOT RUN" start="2025-02-27T09:48:05.621399" elapsed="0.001003"/>
+<status status="NOT RUN" start="2025-02-27T14:22:32.162230" elapsed="0.000000"/>
 </branch>
 <branch type="ELSE">
 <kw name="Log To Console" owner="BuiltIn">
-<arg>Database : "Jetsada phone" already exists, skipping insert</arg>
+<arg>Database : "${pd_name}" already exists, skipping insert</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-02-27T09:48:05.622402" elapsed="0.000000"/>
+<status status="PASS" start="2025-02-27T14:22:32.162230" elapsed="0.001000"/>
 </kw>
-<status status="PASS" start="2025-02-27T09:48:05.622402" elapsed="0.000000"/>
+<status status="PASS" start="2025-02-27T14:22:32.162230" elapsed="0.001000"/>
 </branch>
-<status status="PASS" start="2025-02-27T09:48:05.621399" elapsed="0.002000"/>
+<status status="PASS" start="2025-02-27T14:22:32.161226" elapsed="0.002004"/>
 </if>
 <return>
 <value>${pd_id}</value>
@@ -95,95 +95,437 @@ usually they are tuples or tuple-like objects.</doc>
 <value>${pd_qty}</value>
 <value>${pd_price}</value>
 <value>${pd_rec}</value>
-<status status="PASS" start="2025-02-27T09:48:05.623399" elapsed="0.000000"/>
+<status status="PASS" start="2025-02-27T14:22:32.163230" elapsed="0.000000"/>
 </return>
-<arg>666</arg>
-<arg>Jetsada phone</arg>
-<arg>Smartphone</arg>
-<arg>10</arg>
-<arg>10000.0</arg>
+<arg>${product_id}</arg>
+<arg>${product_name}</arg>
+<arg>${product_desc}</arg>
+<arg>${product_qty}</arg>
+<arg>${product_price}</arg>
+<arg>${rec_status}</arg>
+<status status="PASS" start="2025-02-27T14:22:32.144025" elapsed="0.020214"/>
+</kw>
+<kw name="Get Every Column Of Product And Verify Data" owner="get_product">
+<kw name="Query" owner="DatabaseLibrary">
+<msg time="2025-02-27T14:22:32.165240" level="INFO" html="true">Executing sql:&lt;br&gt;&lt;code style="font-weight: bold;"&gt;SELECT * FROM product WHERE name='Jetsada phone';&lt;/code&gt;</msg>
+<msg time="2025-02-27T14:22:32.172446" level="INFO" html="true">&lt;div style="max-width: 100%; overflow-x: auto;"&gt;&lt;table style="width: auto; border-collapse: collapse; border: 2px solid rgb(140 140 140)"&gt;&lt;caption style="text-align: left; font-weight: bold; padding: 5px;"&gt;Query returned 1 rows&lt;/caption&gt;&lt;tr&gt;&lt;th scope="col" style="background-color: #d6ecd4; border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;Row&lt;/th&gt;&lt;th scope="col" style="background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;id&lt;/th&gt;&lt;th scope="col" style="background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;name&lt;/th&gt;&lt;th scope="col" style="background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;description&lt;/th&gt;&lt;th scope="col" style="background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;qty&lt;/th&gt;&lt;th scope="col" style="background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;price&lt;/th&gt;&lt;th scope="col" style="background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;discount&lt;/th&gt;&lt;th scope="col" style="background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;image_url&lt;/th&gt;&lt;th scope="col" style="background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;product_category_id&lt;/th&gt;&lt;th scope="col" style="background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;rec_created_when&lt;/th&gt;&lt;th scope="col" style="background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;rec_modified_when&lt;/th&gt;&lt;th scope="col" style="background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;rec_status&lt;/th&gt;&lt;/tr&gt;&lt;tr style="background-color: #eee;"&gt;&lt;th scope="row" style="background-color: #d6ecd4;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;0&lt;/th&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;666&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;Jetsada phone&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;Very Lucky phone&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;8&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;10000.00&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;None&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;None&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;None&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;2025-02-27 14:22:01.403368+07:00&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;None&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;1&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;</msg>
+<msg time="2025-02-27T14:22:32.172446" level="INFO">${result} = [(666, 'Jetsada phone', 'Very Lucky phone', 8, Decimal('10000.00'), None, None, None, datetime.datetime(2025, 2, 27, 14, 22, 1, 403368, tzinfo=datetime.timezone(datetime.timedelta(seconds=25200))), No...</msg>
+<var>${result}</var>
+<arg>SELECT * FROM product WHERE name='${pd_name}';</arg>
+<doc>Runs a query with the ``select_statement`` and returns the result as list of rows.
+The type of row values depends on the database module -
+usually they are tuples or tuple-like objects.</doc>
+<status status="PASS" start="2025-02-27T14:22:32.165240" elapsed="0.007206"/>
+</kw>
+<kw name="Should Not Be Empty" owner="BuiltIn">
+<msg time="2025-02-27T14:22:32.173692" level="INFO">Length is 1.</msg>
+<arg>${result}</arg>
+<arg>"Item not exists"</arg>
+<doc>Verifies that the given item is not empty.</doc>
+<status status="PASS" start="2025-02-27T14:22:32.172446" elapsed="0.001246"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-02-27T14:22:32.174871" level="INFO">${id} = 666</msg>
+<var>${id}</var>
+<arg>${result[0][0]}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-02-27T14:22:32.173692" elapsed="0.001179"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-02-27T14:22:32.174871" level="INFO">${name} = Jetsada phone</msg>
+<var>${name}</var>
+<arg>${result[0][1]}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-02-27T14:22:32.174871" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-02-27T14:22:32.175874" level="INFO">${description} = Very Lucky phone</msg>
+<var>${description}</var>
+<arg>${result[0][2]}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-02-27T14:22:32.174871" elapsed="0.001003"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-02-27T14:22:32.175874" level="INFO">${qty} = 8</msg>
+<var>${qty}</var>
+<arg>${result[0][3]}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-02-27T14:22:32.175874" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-02-27T14:22:32.176882" level="INFO">${price} = 10000.00</msg>
+<var>${price}</var>
+<arg>${result[0][4]}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-02-27T14:22:32.175874" elapsed="0.001008"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-02-27T14:22:32.176882" level="INFO">${rec_status} = None</msg>
+<var>${rec_status}</var>
+<arg>${result[0][5]}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-02-27T14:22:32.176882" elapsed="0.001055"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Set Variable" owner="BuiltIn">
 <arg>1</arg>
-<status status="PASS" start="2025-02-27T09:48:05.593366" elapsed="0.030033"/>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-02-27T14:22:32.178943" elapsed="0.000000"/>
+</kw>
+<msg time="2025-02-27T14:22:32.178943" level="INFO">${rec_status} = 1</msg>
+<var>${rec_status}</var>
+<arg>'${rec_status}' == 'None'</arg>
+<arg>Set Variable</arg>
+<arg>1</arg>
+<arg>ELSE</arg>
+<arg>Set Variable</arg>
+<arg>${rec_status}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-02-27T14:22:32.177937" elapsed="0.001006"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${id}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-02-27T14:22:32.178943" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${name}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-02-27T14:22:32.178943" elapsed="0.001004"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${description}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-02-27T14:22:32.179947" elapsed="0.000991"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${qty}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-02-27T14:22:32.180938" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${price}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-02-27T14:22:32.180938" elapsed="0.001003"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${rec_status}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-02-27T14:22:32.181941" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<arg>${id}</arg>
+<arg>${pd_id}</arg>
+<arg>"Record status does not match!"</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" start="2025-02-27T14:22:32.182932" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${name}</arg>
+<arg>${pd_name}</arg>
+<arg>"Product name does not match!"</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2025-02-27T14:22:32.182932" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${description}</arg>
+<arg>${pd_desc}</arg>
+<arg>"Description does not match!"</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2025-02-27T14:22:32.183940" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<msg time="2025-02-27T14:22:32.183940" level="FAIL">"Quantity does not match!": 8.0 != 10.0</msg>
+<arg>${qty}</arg>
+<arg>${pd_qty}</arg>
+<arg>"Quantity does not match!"</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="FAIL" start="2025-02-27T14:22:32.183940" elapsed="0.000000">"Quantity does not match!": 8.0 != 10.0</status>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<arg>${price}</arg>
+<arg>${pd_price}</arg>
+<arg>"Price does not match!"</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="NOT RUN" start="2025-02-27T14:22:32.183940" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<arg>${rec_status}</arg>
+<arg>${pd_rec}</arg>
+<arg>"Record status does not match!"</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="NOT RUN" start="2025-02-27T14:22:32.183940" elapsed="0.000000"/>
+</kw>
+<arg>${product_id}</arg>
+<arg>${product_name}</arg>
+<arg>${product_desc}</arg>
+<arg>${product_qty}</arg>
+<arg>${product_price}</arg>
+<arg>${rec_status}</arg>
+<status status="FAIL" start="2025-02-27T14:22:32.164239" elapsed="0.020698">"Quantity does not match!": 8.0 != 10.0</status>
+</kw>
+<kw name="Check If After Item Exist In Database Then Delete" owner="delete_product">
+<arg>${product_name}</arg>
+<status status="NOT RUN" start="2025-02-27T14:22:32.184937" elapsed="0.000000"/>
+</kw>
+<tag>tc01</tag>
+<status status="FAIL" start="2025-02-27T14:22:32.064603" elapsed="0.120334">"Quantity does not match!": 8.0 != 10.0</status>
+</test>
+<test id="s1-t2" name="TC02 - Verify can decrease product qty" line="26">
+<kw name="Connect To Database And Fetch Data" owner="commom_keyword">
+<kw name="Connect To Database" owner="DatabaseLibrary">
+<msg time="2025-02-27T14:22:32.188461" level="INFO">Looking for configuration file: 'resources\db.cfg'</msg>
+<msg time="2025-02-27T14:22:32.188461" level="INFO">Configuration file doesn't exist</msg>
+<msg time="2025-02-27T14:22:32.188461" level="INFO">Connect to DB using : psycopg2.connect(database='training_platform_db', user='doppio-training-user', password=***, host='125.26.15.143', port=10004)</msg>
+<msg time="2025-02-27T14:22:32.238451" level="WARN">Overwriting not closed connection.</msg>
+<arg>${DB_DRIVER}</arg>
+<arg>${DB_NAME}</arg>
+<arg>${DB_USER}</arg>
+<arg>${DB_PASSWORD}</arg>
+<arg>${DB_HOST}</arg>
+<arg>${DB_PORT}</arg>
+<doc>Creates a database connection using the DB API 2.0 ``db_module`` and the parameters provided.
+Along with listed commonly used arguments (`db_name`, `db_host` etc.)
+you can set any other DB module specific parameters as key/value pairs.</doc>
+<status status="PASS" start="2025-02-27T14:22:32.187442" elapsed="0.051009"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>🟢</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-02-27T14:22:32.239451" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>.Database : Connect</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-02-27T14:22:32.239451" elapsed="0.001000"/>
+</kw>
+<status status="PASS" start="2025-02-27T14:22:32.187442" elapsed="0.053009"/>
+</kw>
+<kw name="Check If Item Not Exist In Database Then Added" owner="commom_keyword">
+<kw name="Query" owner="DatabaseLibrary">
+<msg time="2025-02-27T14:22:32.241453" level="INFO" html="true">Executing sql:&lt;br&gt;&lt;code style="font-weight: bold;"&gt;SELECT COUNT(id) FROM product WHERE name='Jetsada phone';&lt;/code&gt;</msg>
+<msg time="2025-02-27T14:22:32.260102" level="INFO" html="true">&lt;div style="max-width: 100%; overflow-x: auto;"&gt;&lt;table style="width: auto; border-collapse: collapse; border: 2px solid rgb(140 140 140)"&gt;&lt;caption style="text-align: left; font-weight: bold; padding: 5px;"&gt;Query returned 1 rows&lt;/caption&gt;&lt;tr&gt;&lt;th scope="col" style="background-color: #d6ecd4; border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;Row&lt;/th&gt;&lt;th scope="col" style="background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;count&lt;/th&gt;&lt;/tr&gt;&lt;tr style="background-color: #eee;"&gt;&lt;th scope="row" style="background-color: #d6ecd4;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;0&lt;/th&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;1&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;</msg>
+<msg time="2025-02-27T14:22:32.261113" level="INFO">${result} = [(1,)]</msg>
+<var>${result}</var>
+<arg>SELECT COUNT(id) FROM product WHERE name='${pd_name}';</arg>
+<doc>Runs a query with the ``select_statement`` and returns the result as list of rows.
+The type of row values depends on the database module -
+usually they are tuples or tuple-like objects.</doc>
+<status status="PASS" start="2025-02-27T14:22:32.241453" elapsed="0.019660"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-02-27T14:22:32.262104" level="INFO">${count} = 1</msg>
+<var>${count}</var>
+<arg>${result[0][0]}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-02-27T14:22:32.261113" elapsed="0.000991"/>
+</kw>
+<if>
+<branch type="IF" condition="${count} == 0">
+<kw name="Execute Sql String" owner="DatabaseLibrary">
+<arg>INSERT INTO product (id, name, description, qty, price, rec_status) VALUES (${pd_id}, '${pd_name}', '${pd_desc}', ${pd_qty}, ${pd_price}, ${pd_rec});</arg>
+<doc>Executes the ``sql_string`` as a single SQL command.</doc>
+<status status="NOT RUN" start="2025-02-27T14:22:32.262104" elapsed="0.001003"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Database : Inserted "Jetsada phone" into database</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2025-02-27T14:22:32.263107" elapsed="0.000000"/>
+</kw>
+<kw name="Query" owner="DatabaseLibrary">
+<var>${new_count}</var>
+<arg>SELECT COUNT(*) FROM product WHERE name='${pd_name}';</arg>
+<doc>Runs a query with the ``select_statement`` and returns the result as list of rows.
+The type of row values depends on the database module -
+usually they are tuples or tuple-like objects.</doc>
+<status status="NOT RUN" start="2025-02-27T14:22:32.263107" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<arg>${new_count[0][0]}</arg>
+<arg>1</arg>
+<arg>"Insert failed"</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="NOT RUN" start="2025-02-27T14:22:32.263107" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2025-02-27T14:22:32.262104" elapsed="0.001003"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Database : "${pd_name}" already exists, skipping insert</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-02-27T14:22:32.263107" elapsed="0.000997"/>
+</kw>
+<status status="PASS" start="2025-02-27T14:22:32.263107" elapsed="0.000997"/>
+</branch>
+<status status="PASS" start="2025-02-27T14:22:32.262104" elapsed="0.002000"/>
+</if>
+<return>
+<value>${pd_id}</value>
+<value>${pd_name}</value>
+<value>${pd_desc}</value>
+<value>${pd_qty}</value>
+<value>${pd_price}</value>
+<value>${pd_rec}</value>
+<status status="PASS" start="2025-02-27T14:22:32.264104" elapsed="0.000000"/>
+</return>
+<arg>${product_id}</arg>
+<arg>${product_name}</arg>
+<arg>${product_desc}</arg>
+<arg>${product_qty}</arg>
+<arg>${product_price}</arg>
+<arg>${rec_status}</arg>
+<status status="PASS" start="2025-02-27T14:22:32.240451" elapsed="0.023653"/>
 </kw>
 <kw name="Decrease Product QTY After Buy Product" owner="decrease_product">
 <kw name="Query" owner="DatabaseLibrary">
-<msg time="2025-02-27T09:48:05.624397" level="INFO" html="true">Executing sql:&lt;br&gt;&lt;code style="font-weight: bold;"&gt;SELECT qty FROM product WHERE id=666;&lt;/code&gt;</msg>
-<msg time="2025-02-27T09:48:05.632681" level="INFO" html="true">&lt;div style="max-width: 100%; overflow-x: auto;"&gt;&lt;table style="width: auto; border-collapse: collapse; border: 2px solid rgb(140 140 140)"&gt;&lt;caption style="text-align: left; font-weight: bold; padding: 5px;"&gt;Query returned 1 rows&lt;/caption&gt;&lt;tr&gt;&lt;th scope="col" style="background-color: #d6ecd4; border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;Row&lt;/th&gt;&lt;th scope="col" style="background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;qty&lt;/th&gt;&lt;/tr&gt;&lt;tr style="background-color: #eee;"&gt;&lt;th scope="row" style="background-color: #d6ecd4;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;0&lt;/th&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;20&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;</msg>
-<msg time="2025-02-27T09:48:05.632681" level="INFO">${result} = [(20,)]</msg>
+<msg time="2025-02-27T14:22:32.267104" level="INFO" html="true">Executing sql:&lt;br&gt;&lt;code style="font-weight: bold;"&gt;SELECT qty FROM product WHERE id=666;&lt;/code&gt;</msg>
+<msg time="2025-02-27T14:22:32.274901" level="INFO" html="true">&lt;div style="max-width: 100%; overflow-x: auto;"&gt;&lt;table style="width: auto; border-collapse: collapse; border: 2px solid rgb(140 140 140)"&gt;&lt;caption style="text-align: left; font-weight: bold; padding: 5px;"&gt;Query returned 1 rows&lt;/caption&gt;&lt;tr&gt;&lt;th scope="col" style="background-color: #d6ecd4; border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;Row&lt;/th&gt;&lt;th scope="col" style="background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;qty&lt;/th&gt;&lt;/tr&gt;&lt;tr style="background-color: #eee;"&gt;&lt;th scope="row" style="background-color: #d6ecd4;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;0&lt;/th&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;8&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;</msg>
+<msg time="2025-02-27T14:22:32.274901" level="INFO">${result} = [(8,)]</msg>
 <var>${result}</var>
 <arg>SELECT qty FROM product WHERE id=${pd_id};</arg>
 <doc>Runs a query with the ``select_statement`` and returns the result as list of rows.
 The type of row values depends on the database module -
 usually they are tuples or tuple-like objects.</doc>
-<status status="PASS" start="2025-02-27T09:48:05.624397" elapsed="0.008284"/>
+<status status="PASS" start="2025-02-27T14:22:32.266101" elapsed="0.008800"/>
 </kw>
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2025-02-27T09:48:05.633720" level="INFO">${current_qty} = 20</msg>
+<msg time="2025-02-27T14:22:32.275900" level="INFO">${current_qty} = 8</msg>
 <var>${current_qty}</var>
 <arg>${result[0][0]}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2025-02-27T09:48:05.633720" elapsed="0.000000"/>
+<status status="PASS" start="2025-02-27T14:22:32.275900" elapsed="0.000000"/>
 </kw>
 <if>
 <branch type="IF" condition="${current_qty}&gt;0">
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2025-02-27T09:48:05.634713" level="INFO">${new_qty} = 19</msg>
+<msg time="2025-02-27T14:22:32.276903" level="INFO">${new_qty} = 7</msg>
 <var>${new_qty}</var>
 <arg>${current_qty} - 1</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2025-02-27T09:48:05.634713" elapsed="0.000000"/>
+<status status="PASS" start="2025-02-27T14:22:32.276903" elapsed="0.000000"/>
 </kw>
 <kw name="Execute Sql String" owner="DatabaseLibrary">
-<msg time="2025-02-27T09:48:05.634713" level="INFO" html="true">Executing sql:&lt;br&gt;&lt;code style="font-weight: bold;"&gt;UPDATE product SET qty=19 WHERE id=666;&lt;/code&gt;</msg>
-<msg time="2025-02-27T09:48:05.641697" level="INFO">Commit the transaction</msg>
+<msg time="2025-02-27T14:22:32.277411" level="INFO" html="true">Executing sql:&lt;br&gt;&lt;code style="font-weight: bold;"&gt;UPDATE product SET qty=7 WHERE id=666;&lt;/code&gt;</msg>
+<msg time="2025-02-27T14:22:32.288048" level="INFO">Commit the transaction</msg>
 <arg>UPDATE product SET qty=${new_qty} WHERE id=${pd_id};</arg>
 <doc>Executes the ``sql_string`` as a single SQL command.</doc>
-<status status="PASS" start="2025-02-27T09:48:05.634713" elapsed="0.018335"/>
+<status status="PASS" start="2025-02-27T14:22:32.276903" elapsed="0.020202"/>
 </kw>
 <kw name="Execute Sql String" owner="DatabaseLibrary">
-<msg time="2025-02-27T09:48:05.654089" level="INFO" html="true">Executing sql:&lt;br&gt;&lt;code style="font-weight: bold;"&gt;COMMIT;&lt;/code&gt;</msg>
-<msg time="2025-02-27T09:48:05.660287" level="INFO">Commit the transaction</msg>
+<msg time="2025-02-27T14:22:32.297105" level="INFO" html="true">Executing sql:&lt;br&gt;&lt;code style="font-weight: bold;"&gt;COMMIT;&lt;/code&gt;</msg>
+<msg time="2025-02-27T14:22:32.309865" level="INFO">Commit the transaction</msg>
 <arg>COMMIT;</arg>
 <doc>Executes the ``sql_string`` as a single SQL command.</doc>
-<status status="PASS" start="2025-02-27T09:48:05.654089" elapsed="0.006198"/>
+<status status="PASS" start="2025-02-27T14:22:32.297105" elapsed="0.019992"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>"Decreased QTY from ${current_qty} to ${new_qty}"</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-02-27T09:48:05.660287" elapsed="0.015013"/>
+<status status="PASS" start="2025-02-27T14:22:32.317097" elapsed="0.001016"/>
 </kw>
-<status status="PASS" start="2025-02-27T09:48:05.634713" elapsed="0.040587"/>
+<status status="PASS" start="2025-02-27T14:22:32.275900" elapsed="0.042213"/>
 </branch>
 <branch type="ELSE IF" condition="${current_qty}==0">
 <kw name="Log To Console" owner="BuiltIn">
 <arg>"QTY is 0, cannot decrease."</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" start="2025-02-27T09:48:05.675300" elapsed="0.000000"/>
+<status status="NOT RUN" start="2025-02-27T14:22:32.318113" elapsed="0.000000"/>
 </kw>
-<status status="NOT RUN" start="2025-02-27T09:48:05.675300" elapsed="0.000000"/>
+<status status="NOT RUN" start="2025-02-27T14:22:32.318113" elapsed="0.000000"/>
 </branch>
-<status status="PASS" start="2025-02-27T09:48:05.634713" elapsed="0.040587"/>
+<status status="PASS" start="2025-02-27T14:22:32.275900" elapsed="0.042213"/>
 </if>
-<arg>666</arg>
+<arg>${product_id}</arg>
+<arg>${product_qty}</arg>
+<status status="PASS" start="2025-02-27T14:22:32.266101" elapsed="0.052012"/>
+</kw>
+<kw name="Check If After Item Exist In Database Then Delete" owner="delete_product">
+<kw name="Query" owner="DatabaseLibrary">
+<msg time="2025-02-27T14:22:32.319125" level="INFO" html="true">Executing sql:&lt;br&gt;&lt;code style="font-weight: bold;"&gt;SELECT COUNT(id) FROM product WHERE name='Jetsada phone';&lt;/code&gt;</msg>
+<msg time="2025-02-27T14:22:32.332171" level="INFO" html="true">&lt;div style="max-width: 100%; overflow-x: auto;"&gt;&lt;table style="width: auto; border-collapse: collapse; border: 2px solid rgb(140 140 140)"&gt;&lt;caption style="text-align: left; font-weight: bold; padding: 5px;"&gt;Query returned 1 rows&lt;/caption&gt;&lt;tr&gt;&lt;th scope="col" style="background-color: #d6ecd4; border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;Row&lt;/th&gt;&lt;th scope="col" style="background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;count&lt;/th&gt;&lt;/tr&gt;&lt;tr style="background-color: #eee;"&gt;&lt;th scope="row" style="background-color: #d6ecd4;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;0&lt;/th&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;1&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;</msg>
+<msg time="2025-02-27T14:22:32.332171" level="INFO">${delete_check} = [(1,)]</msg>
+<var>${delete_check}</var>
+<arg>SELECT COUNT(id) FROM product WHERE name='${pd_name}';</arg>
+<doc>Runs a query with the ``select_statement`` and returns the result as list of rows.
+The type of row values depends on the database module -
+usually they are tuples or tuple-like objects.</doc>
+<status status="PASS" start="2025-02-27T14:22:32.319125" elapsed="0.013046"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-02-27T14:22:32.333136" level="INFO">${delete_count} = 1</msg>
+<var>${delete_count}</var>
+<arg>${delete_check[0][0]}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-02-27T14:22:32.333136" elapsed="0.000000"/>
+</kw>
+<if>
+<branch type="IF" condition="${delete_count} &gt; 0">
+<kw name="Execute Sql String" owner="DatabaseLibrary">
+<msg time="2025-02-27T14:22:32.334147" level="INFO" html="true">Executing sql:&lt;br&gt;&lt;code style="font-weight: bold;"&gt;DELETE FROM product WHERE name='Jetsada phone';&lt;/code&gt;</msg>
+<msg time="2025-02-27T14:22:32.341176" level="INFO">Commit the transaction</msg>
+<arg>DELETE FROM product WHERE name='${pd_name}';</arg>
+<doc>Executes the ``sql_string`` as a single SQL command.</doc>
+<status status="PASS" start="2025-02-27T14:22:32.334147" elapsed="0.015290"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Database : Deleted "Jetsada phone" from database</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-02-27T14:22:32.349437" elapsed="0.001005"/>
+</kw>
+<kw name="Query" owner="DatabaseLibrary">
+<msg time="2025-02-27T14:22:32.351443" level="INFO" html="true">Executing sql:&lt;br&gt;&lt;code style="font-weight: bold;"&gt;SELECT COUNT(*) FROM product WHERE name='Jetsada phone';&lt;/code&gt;</msg>
+<msg time="2025-02-27T14:22:32.367051" level="INFO" html="true">&lt;div style="max-width: 100%; overflow-x: auto;"&gt;&lt;table style="width: auto; border-collapse: collapse; border: 2px solid rgb(140 140 140)"&gt;&lt;caption style="text-align: left; font-weight: bold; padding: 5px;"&gt;Query returned 1 rows&lt;/caption&gt;&lt;tr&gt;&lt;th scope="col" style="background-color: #d6ecd4; border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;Row&lt;/th&gt;&lt;th scope="col" style="background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;count&lt;/th&gt;&lt;/tr&gt;&lt;tr style="background-color: #eee;"&gt;&lt;th scope="row" style="background-color: #d6ecd4;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;0&lt;/th&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;0&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;</msg>
+<msg time="2025-02-27T14:22:32.367051" level="INFO">${final_count} = [(0,)]</msg>
+<var>${final_count}</var>
+<arg>SELECT COUNT(*) FROM product WHERE name='${pd_name}';</arg>
+<doc>Runs a query with the ``select_statement`` and returns the result as list of rows.
+The type of row values depends on the database module -
+usually they are tuples or tuple-like objects.</doc>
+<status status="PASS" start="2025-02-27T14:22:32.350442" elapsed="0.016609"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<msg time="2025-02-27T14:22:32.368063" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${final_count[0][0]}</arg>
 <arg>0</arg>
-<status status="PASS" start="2025-02-27T09:48:05.624397" elapsed="0.051929"/>
+<arg>"Delete failed"</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" start="2025-02-27T14:22:32.367051" elapsed="0.001012"/>
+</kw>
+<status status="PASS" start="2025-02-27T14:22:32.334147" elapsed="0.033916"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Database : "Jetsada phone" not found, skipping delete</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2025-02-27T14:22:32.368063" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2025-02-27T14:22:32.368063" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2025-02-27T14:22:32.334147" elapsed="0.033916"/>
+</if>
+<arg>${product_name}</arg>
+<status status="PASS" start="2025-02-27T14:22:32.319125" elapsed="0.048938"/>
 </kw>
 <tag>tc02</tag>
-<status status="PASS" start="2025-02-27T09:48:05.532399" elapsed="0.143927"/>
+<status status="PASS" start="2025-02-27T14:22:32.186930" elapsed="0.182131"/>
 </test>
-<status status="PASS" start="2025-02-27T09:48:05.480420" elapsed="0.196899"/>
+<status status="FAIL" start="2025-02-27T14:22:32.006090" elapsed="0.363974"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
+<stat pass="0" fail="1" skip="0">tc01</stat>
 <stat pass="1" fail="0" skip="0">tc02</stat>
 </tag>
 <suite>
-<stat name="Tc" id="s1" pass="1" fail="0" skip="0">Tc</stat>
+<stat name="Tc" id="s1" pass="1" fail="1" skip="0">Tc</stat>
 </suite>
 </statistics>
 <errors>
+<msg time="2025-02-27T14:22:32.238451" level="WARN">Overwriting not closed connection.</msg>
 </errors>
 </robot>

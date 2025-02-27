@@ -16,7 +16,7 @@ Check If Item Not Exist In Database Then Added
     ${new_count}=                 Query                                                          SELECT COUNT(*) FROM product WHERE name='${pd_name}';
     Should Be Equal As Numbers    ${new_count[0][0]}                                             1                                                           "Insert failed"
     ELSE
-    Log To Console                Database : "Jetsada phone" already exists, skipping insert 
+    Log To Console                Database : "${pd_name}" already exists, skipping insert 
     END
 
     RETURN      ${pd_id}        ${pd_name}       ${pd_desc}      ${pd_qty}       ${pd_price}     ${pd_rec}
